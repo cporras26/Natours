@@ -16,6 +16,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -50,6 +54,11 @@
   &__radio-group {
     display: inline-block;
     width: 49%;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__radio-input {
@@ -58,7 +67,7 @@
 
   &__radio-label {
     cursor: pointer;
-    padding-left: 4rem;
+    padding-left: 3.5rem;
     position: relative;
   }
 
